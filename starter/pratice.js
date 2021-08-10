@@ -40,4 +40,31 @@ const game = {
     },
 };
 
-const [players1 , players2] = game.players
+const [players1 , players2] = game.players;
+console.log(players1,players2);
+
+//2
+const[gk, ...fieldplayers] = players1;
+console.log(gk,fieldplayers);
+
+//3 
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+// final 
+const players1Final = [...players1,'thingo','coutino','periscic'];
+console.log(players1Final);
+
+// 5
+const {odds:{team1,x:draw,team2}} = game;
+console.log(team1,draw,team2);
+
+//6 
+const printGoals = function(...players) {
+    console.log(`${players.length} goals were scored`);
+};
+printGoals('sanjay','piyush','ritesh');
+printGoals(game.scored);
+
+//7 find who will win 
+team1<team2 && console.log('Team1 more likely to win');
