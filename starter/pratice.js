@@ -68,3 +68,18 @@ printGoals(game.scored);
 
 //7 find who will win 
 team1<team2 && console.log('Team1 more likely to win');
+
+// coding challenge 2.
+//1 
+for(const[i,player]of game.scored.entries()) console.log(`Goal ${i+1}:${player}`);
+//2
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
+//3 3rd question 
+for (const [team,odd] of Object.entries(game.odds)){
+    const teamstr = team ==='x' ? 'draw' : `'victory' ${game[team]}`; 
+    console.log(team,odd);
+}

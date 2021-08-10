@@ -17,6 +17,10 @@ const openingHours = {
       open: 0, // Open 24 hours
       close: 24,
     },
+    [weekDays[3]]: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
   };
   
 
@@ -63,3 +67,20 @@ const users=[
     {name:'jonas', email:'gunjan12@gmail.com',}
 ];
 console.log(users[0]?.name ?? 'user array is empty');
+
+// looping objects , object keys , values and entries.
+for (const day of Object.keys(openingHours)){
+    console.log(day);
+}
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openstr =`we are open on ${properties.length},days:`;
+for (const day of properties){
+    openstr += `${day},`;
+}
+console.log(openstr);
+
+// property value 
+const entries = Object.entries(openingHours);
+console.log(entries);
